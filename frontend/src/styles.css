@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #121725; background: #f3f5f8; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.loading { min-height: 100vh; display: grid; place-items: center; color: #687083; }
+.eyebrow { color: #7c879c; font-size: .7rem; letter-spacing: .14em; font-weight: 700; }
+.brand { display: flex; align-items: center; gap: 12px; font-family: Manrope, sans-serif; color: white; font-size: 1.2rem; }
+.brand > span, .mini-mark, .mobile-brand { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 10px; background: #cfef47; color: #111827; font-weight: 800; }
+.auth-layout { min-height: 100vh; display: grid; grid-template-columns: minmax(380px, 1.05fr) minmax(440px, .95fr); }
+.auth-hero { padding: 42px 7vw; color: white; background: radial-gradient(circle at 70% 30%, #273760 0, transparent 34%), #0b1020; display: flex; flex-direction: column; justify-content: space-between; }
+.hero-copy h1 { font: 700 clamp(3rem, 5.5vw, 6.2rem)/.98 Manrope, sans-serif; letter-spacing: -.06em; margin: 20px 0 24px; }
+.hero-copy h1 em { color: #cfef47; font-style: normal; }
+.hero-copy p { color: #a8b1c5; font-size: 1.1rem; }
+.security-note { color: #99a4ba; font-size: .84rem; display: flex; gap: 9px; }
+.security-note span { color: #cfef47; }
+.auth-panel { padding: 40px; display: grid; place-items: center; background: #f7f8fa; }
+.auth-card { width: min(100%, 430px); }
+.auth-heading { margin-bottom: 34px; }
+.mini-mark { display: none; }
+.auth-heading h2 { font: 700 2.1rem Manrope, sans-serif; letter-spacing: -.04em; margin: 0 0 8px; }
+.auth-heading p, .modal p, .form-card-head p { margin: 0; color: #788196; }
+label { display: grid; gap: 8px; margin-bottom: 19px; font-size: .82rem; font-weight: 600; color: #414a5d; }
+input { width: 100%; border: 1px solid #dce0e8; background: white; border-radius: 12px; padding: 14px 15px; color: #151a26; outline: none; transition: .2s; }
+input:focus { border-color: #94a72a; box-shadow: 0 0 0 3px #eaf4bb; }
+.primary { border: 0; background: #161d2e; color: white; border-radius: 12px; padding: 14px 20px; font-weight: 700; transition: .2s; }
+.primary:hover { background: #27324a; transform: translateY(-1px); }
+.primary:disabled { opacity: .55; cursor: wait; transform: none; }
+.wide { width: 100%; }
+.switch-copy { text-align: center; color: #7c8598; font-size: .88rem; margin-top: 22px; }
+.switch-copy button { border: 0; background: none; color: #293720; font-weight: 700; padding: 0 3px; }
+.alert { border-radius: 10px; padding: 11px 13px; font-size: .85rem; margin: 0 0 18px; }
+.alert.error { color: #9f2733; background: #feebed; }
+.alert.success { color: #286244; background: #e5f7ec; }
+.app-shell { min-height: 100vh; display: grid; grid-template-columns: 245px 1fr; }
+.sidebar { position: sticky; top: 0; height: 100vh; padding: 34px 25px; background: #0b1020; display: flex; flex-direction: column; }
+.sidebar nav { margin-top: 65px; display: grid; gap: 9px; }
+.nav-button { display: flex; align-items: center; gap: 13px; border: 0; background: transparent; color: #8f9ab0; border-radius: 11px; padding: 12px 14px; text-align: left; font-weight: 600; }
+.nav-button i { font-style: normal; font-size: 1.15rem; width: 20px; text-align: center; }
+.nav-button:hover, .nav-button.active { color: white; background: #1a2236; }
+.nav-button.active i { color: #cfef47; }
+.logout { margin-top: auto; border: 1px solid #293248; background: transparent; color: #9da6b8; border-radius: 10px; padding: 11px; }
+main { min-width: 0; }
+.topbar { min-height: 130px; padding: 32px clamp(25px, 5vw, 75px); background: white; border-bottom: 1px solid #e4e7ed; display: flex; align-items: center; justify-content: space-between; }
+.topbar h1 { margin: 5px 0 0; font: 700 clamp(1.55rem, 2.5vw, 2.15rem) Manrope, sans-serif; letter-spacing: -.035em; }
+.avatar { width: 43px; height: 43px; border-radius: 50%; display: grid; place-items: center; background: #e7ecf3; color: #384258; font-weight: 800; }
+.mobile-brand, .mobile-nav { display: none; }
+.page-content { max-width: 1200px; margin: auto; padding: clamp(28px, 4vw, 58px) clamp(22px, 5vw, 74px) 100px; }
+.page-content.narrow { max-width: 820px; }
+.balance-card { min-height: 260px; position: relative; overflow: hidden; color: white; background: linear-gradient(125deg, #121a2d, #202d4d); border-radius: 22px; padding: 35px 40px; box-shadow: 0 24px 55px #1e294029; }
+.balance-card:after { content: ''; position: absolute; width: 330px; height: 330px; border: 70px solid #cfef4718; border-radius: 50%; right: -100px; top: -180px; }
+.balance-card > div:first-child { display: flex; flex-direction: column; position: relative; z-index: 1; }
+.balance-card span { font-size: .67rem; letter-spacing: .13em; color: #a9b3c8; font-weight: 700; }
+.balance-card strong { font: 700 clamp(2.3rem, 5vw, 4rem) Manrope, sans-serif; letter-spacing: -.05em; margin: 17px 0 1px; }
+.balance-card small { color: #9fa9bc; }
+.card-mark { position: absolute; right: 38px; top: 34px; width: 43px; height: 43px; display: grid; place-items: center; color: #182033; border-radius: 12px; background: #cfef47; font-weight: 800; z-index: 1; }
+.balance-card footer { position: absolute; left: 40px; bottom: 30px; display: grid; gap: 7px; }
+.balance-card footer b { font-size: .9rem; letter-spacing: .1em; }
+.quick-section { margin-top: 50px; }
+.section-title { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 22px; }
+.section-title h2 { font: 700 1.45rem Manrope, sans-serif; letter-spacing: -.025em; margin: 6px 0 0; }
+.action-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.action-card { border: 1px solid #e1e4ea; background: white; border-radius: 15px; padding: 20px; text-align: left; display: flex; align-items: center; gap: 16px; transition: .2s; }
+.action-card:hover { border-color: #c6ccda; transform: translateY(-2px); box-shadow: 0 10px 25px #19243a0d; }
+.action-card > span { flex: 0 0 42px; height: 42px; border-radius: 11px; background: #f0f3db; color: #536310; display: grid; place-items: center; font-size: 1.3rem; }
+.action-card div { display: grid; gap: 4px; }
+.action-card strong { font-size: .96rem; }
+.action-card small { color: #8991a1; }
+.action-card i { margin-left: auto; font-style: normal; color: #9da5b5; }
+.modal-backdrop { position: fixed; inset: 0; z-index: 10; background: #070b14a8; display: grid; place-items: center; padding: 20px; backdrop-filter: blur(4px); }
+.modal { position: relative; width: min(100%, 430px); background: white; border-radius: 20px; padding: 34px; box-shadow: 0 30px 90px #0005; }
+.modal h2 { font: 700 1.5rem Manrope, sans-serif; margin: 18px 0 6px; }
+.modal p { margin-bottom: 25px; }
+.modal-icon, .form-card-head > span { width: 45px; height: 45px; display: grid; place-items: center; background: #eef4d1; color: #556510; border-radius: 12px; font-size: 1.35rem; }
+.close { position: absolute; right: 18px; top: 17px; border: 0; background: #f0f2f5; width: 30px; height: 30px; border-radius: 50%; color: #677083; }
+.form-card, .history-card { background: white; border: 1px solid #e2e5eb; border-radius: 18px; padding: clamp(24px, 4vw, 40px); }
+.form-card-head { display: flex; align-items: center; gap: 17px; padding-bottom: 27px; border-bottom: 1px solid #eaecf0; margin-bottom: 28px; }
+.form-card-head h2 { font: 700 1.4rem Manrope, sans-serif; margin: 0 0 5px; }
+.available { display: flex; justify-content: space-between; color: #7a8394; font-size: .85rem; background: #f6f7f9; border-radius: 10px; padding: 12px 14px; margin: 4px 0 20px; }
+.available b { color: #30394b; }
+.count { font-size: .75rem; color: #818a9c; background: #f0f2f5; padding: 6px 10px; border-radius: 20px; }
+.transaction-list { margin: 0 -10px; }
+.transaction { display: flex; align-items: center; gap: 15px; padding: 18px 10px; border-top: 1px solid #eceef2; }
+.transaction-icon { flex: 0 0 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; font-weight: 800; }
+.transaction-icon.in { color: #22764b; background: #e3f5ea; }
+.transaction-icon.out { color: #a13a43; background: #fae9eb; }
+.transaction-copy { display: grid; gap: 5px; min-width: 0; }
+.transaction-copy small { color: #8991a2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.transaction > b { margin-left: auto; white-space: nowrap; }
+.positive { color: #237249; }.negative { color: #a33b45; }
+.empty { color: #8991a2; text-align: center; padding: 50px 20px; border-top: 1px solid #eceef2; }
+
+@media (max-width: 760px) {
+  .auth-layout { grid-template-columns: 1fr; background: #f7f8fa; }
+  .auth-hero { display: none; }
+  .auth-panel { padding: 28px 22px; }
+  .mini-mark { display: grid; margin-bottom: 30px; }
+  .app-shell { display: block; }
+  .sidebar { display: none; }
+  .topbar { min-height: 100px; padding: 21px 22px; justify-content: flex-start; gap: 15px; }
+  .topbar .avatar { margin-left: auto; }
+  .mobile-brand { display: grid; border: 0; flex: 0 0 34px; }
+  .page-content { padding: 25px 18px 100px; }
+  .balance-card { min-height: 240px; padding: 28px; }
+  .balance-card footer { left: 28px; }
+  .card-mark { right: 27px; top: 27px; }
+  .action-grid { grid-template-columns: 1fr; }
+  .mobile-nav { position: fixed; display: flex; justify-content: space-around; left: 0; right: 0; bottom: 0; z-index: 8; background: #0b1020; padding: 8px 6px max(8px, env(safe-area-inset-bottom)); box-shadow: 0 -10px 30px #141c3022; }
+  .mobile-nav .nav-button { flex: 1; flex-direction: column; gap: 2px; font-size: .65rem; padding: 7px; }
+  .mobile-nav .nav-button i { font-size: 1.1rem; }
+  .transaction { gap: 10px; }
+  .transaction-copy small { max-width: 155px; }
+  .history-card { padding: 22px 17px; }
+}
+
+@media (max-width: 390px) {
+  .balance-card strong { font-size: 2rem; }
+  .card-mark { display: none; }
+  .transaction > b { font-size: .82rem; }
+}
